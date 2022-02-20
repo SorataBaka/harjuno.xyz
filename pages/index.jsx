@@ -1,7 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import react from "react"
+import dotenv from "dotenv"
+dotenv.config()
 export default function Home(props) {
   return (
     <div className={styles.container}>
@@ -78,9 +79,9 @@ class SocialsList extends react.Component {
   }
 }
 export async function getStaticProps(){
-  const toolsRequest = await fetch('http://localhost:3000/api/tools');
+  const toolsRequest = await fetch(`${process.env.DOMAIN_NAME}/api/tools`);
   const tools = await toolsRequest.json()
-  const socialsRequest = await fetch('http://localhost:3000/api/social');
+  const socialsRequest = await fetch(`${process.env.DOMAIN_NAME}/api/social`);
   const socials = await socialsRequest.json()
   return {
     props: {

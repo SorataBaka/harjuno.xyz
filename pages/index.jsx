@@ -78,10 +78,10 @@ class SocialsList extends react.Component {
     )
   }
 }
-export async function getStaticProps(){
-  const toolsRequest = await fetch(`${process.env.DOMAIN_NAME}/api/tools`);
+export async function getServerSideProps(){
+  const toolsRequest = await fetch(`${process.env.VERCEL_URL}/api/tools`);
   const tools = await toolsRequest.json()
-  const socialsRequest = await fetch(`${process.env.DOMAIN_NAME}/api/social`);
+  const socialsRequest = await fetch(`${process.env.VERCEL_URL}/api/social`);
   const socials = await socialsRequest.json()
   return {
     props: {

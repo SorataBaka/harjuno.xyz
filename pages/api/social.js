@@ -27,7 +27,7 @@ export default function handler(req, res) {
     {
       id: 5,
       socialName: "Email",
-      svgSource: "/api/images/email",
+      svgSource: "/api/assets/email.png",
       website: "mailto:harjuno.tian@gmail.com",
     },
   ])

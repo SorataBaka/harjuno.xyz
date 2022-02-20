@@ -2,44 +2,45 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import react from "react"
 import dotenv from "dotenv"
+import Image from "next/image"
 dotenv.config()
 export default function Home(props) {
   return (
     <div className={styles.container}>
       <Head>
         <title>Christian Harjuno</title>
-        <meta name="description" content="Personal page for Christian Harjuno" />
+        <meta name="description" content="amateur Web/Software Developer who is currently attending college for a Computer Science degree at Bina Nusantara University. Currently active developing Discord Bots for various community servers." />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Add meta tags for google */}
         <meta name="description" content="Personal website for Christian Harjuno"/>
-        <meta name="googlebot" content="all"/>
-        <meta name="robots" content="all"/>
+        <meta name="googlebot" content="index, follow"/>
+        <meta name="robots" content="index, follow"/>
         <meta name="google" content="nopagereadaloud" />
         <meta name="title" content="Christian Harjuno"/>
         <meta name="description" content="Personal website of Christian Harjuno"/>
 
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://harjuno-xyz.vercel.app//"/>
+        <meta property="og:url" content="https://harjuno.xyz//"/>
         <meta property="og:title" content="Christian Harjuno"/>
-        <meta property="og:description" content="Personal website of Christian Harjuno"/>
-        <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"/>
+        <meta property="og:description" content="amateur Web/Software Developer who is currently attending college for a Computer Science degree at Bina Nusantara University. Currently active developing Discord Bots for various community servers. "/>
+        <meta property="og:image" content="/api/assets/snapshot.png"/>
         
         <meta name="theme-color" content="#000343"/>
         <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content="https://harjuno-xyz.vercel.app//"/>
-        <meta property="twitter:title" content="Christian Harjuno"/>
-        <meta property="twitter:description" content="Personal website of Christian Harjuno"/>
-        <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"/>
+        <meta property="twitter:url" content="https://harjuno.xyz//"/>
+        <meta property="twitter:title" content="Christian Harjuno's Personal Website"/>
+        <meta property="twitter:description" content="amateur Web/Software Developer who is currently attending college for a Computer Science degree at Bina Nusantara University. Currently active developing Discord Bots for various community servers. "/>
+        <meta property="twitter:image" content="/api/assets/snapshot.png"/>
       </Head>
 
       <main className={styles.main}>
         <div className={styles.mainContent}>
           <div className={styles.indexBody}>
-            <img src="/api/profileimage" alt="Christian Harjuno Profile Picture"  className={styles.profilePicture}/>
+            <img src="/api/assets/profile.jpg" alt="Christian Harjuno Profile Picture"  className={styles.profilePicture}/>
               <h1 className={styles.name}>Christian Harjuno</h1>
               <h4 className={styles.title}>Web Developer</h4>
-              <p className={styles.aboutMe}>Hi! I’m Chris, an amateur Web/Software Developer who are currently attending college for a Computer Science degree in Bina Nusantara University. Currently active developing Discord Bots for various community servers. I tend to use my skills to automate small insignificant tasks to make things more streamline and efficient. I am always actively learning new things and experimenting to expand my knowledge in programming.</p>  
+              <p className={styles.aboutMe}>Hi! I’m Chris, an amateur Web/Software Developer who is currently attending college for a Computer Science degree at Bina Nusantara University. Currently active developing Discord Bots for various community servers. I tend to use my skills to automate small insignificant tasks to make things more streamlined and efficient. I am always actively learning new things and experimenting to expand my knowledge in programming.</p>  
             <br />
           </div>
           <div className={styles.indexBody}>

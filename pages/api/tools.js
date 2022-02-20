@@ -15,13 +15,13 @@ export default function handler(req, res) {
     {
       id: 3,
       toolName: "Node.js",
-      svgSource: "/api/images/nodejs",
+      svgSource: "/api/assets/nodejs.svg",
       website: "https://nodejs.org/en/",
     },
     {
       id: 4,
       toolName: "Docker",
-      svgSource: "/api/images/docker",
+      svgSource: "/api/assets/docker.svg",
       website: "https://www.docker.com/",
     },
     {

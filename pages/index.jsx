@@ -7,14 +7,15 @@ export default function Home(props) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Christian Harjuno</title>
         <meta name="description" content="Personal page for Christian Harjuno" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Christian Harjuno" />
-        <meta property="og:description" content="Personal page for Christian Harjuno" />
-        <meta property="og:url" content="https://harjuno.xyz" />
-        <meta property="og:type" content="website" />
+        {/* Add meta tags for google */}
+        <meta name="description" content="Personal website for Christian Harjuno"/>
+        <meta name="googlebot" content="all"/>
+        <meta name="robots" content="all"/>
+        <meta name="google" content="nopagereadaloud" />
       </Head>
 
       <main className={styles.main}>

@@ -79,9 +79,9 @@ class SocialsList extends react.Component {
   }
 }
 export async function getServerSideProps(){
-  const toolsRequest = await fetch(`${process.env.VERCEL_URL}/api/tools`);
+  const toolsRequest = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/tools`);
   const tools = await toolsRequest.json()
-  const socialsRequest = await fetch(`${process.env.VERCEL_URL}/api/social`);
+  const socialsRequest = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/social`);
   const socials = await socialsRequest.json()
   return {
     props: {

@@ -36,18 +36,17 @@ export default function Home(props) {
 
       <main className={styles.main}>
         <div className={styles.mainContent}>
-          <div className={styles.indexBody}>
+          <div className={styles.indexBody} id="1">
             <img src="/api/assets/profile.jpg" alt="Christian Harjuno Profile Picture"  className={styles.profilePicture}/>
               <h1 className={styles.name}>Christian Harjuno</h1>
               <h4 className={styles.title}>Web Developer</h4>
-              <p className={styles.aboutMe}>Hi! I’m Chris, an amateur Web/Software Developer who is currently attending college for a Computer Science degree at Bina Nusantara University. Currently active developing Discord Bots for various community servers. I tend to use my skills to automate small insignificant tasks to make things more streamlined and efficient. I am always actively learning new things and experimenting to expand my knowledge in programming.</p>  
-            <br />
+              <p className={styles.aboutMe}>Hi! I’m Chris, an amateur Web/Software Developer who is currently attending college for a Computer Science degree at Bina Nusantara University. Currently active developing Discord Bots for various community servers. I tend to use my skills to automate small insignificant tasks to make things more streamlined and efficient. I am always actively learning new things and experimenting to expand my knowledge in programming.</p> 
           </div>
-          <div className={styles.indexBody}>
+          <div className={styles.indexBody} id="2">
             <h2 className={styles.pageSectionTitle}>Tools I use</h2>
             <List items={props.tools}/>
           </div>
-          <div className={styles.indexBody}>
+          <div className={styles.indexBody} id="3">
             <h2 className={styles.pageSectionTitle}>Contact Me</h2>
             <List items={props.socials}/>
           </div>

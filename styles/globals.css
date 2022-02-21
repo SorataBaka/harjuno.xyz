@@ -14,3 +14,19 @@ a {
 * {
   box-sizing: border-box;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00172b;
+  border-radius: 10px;
+}

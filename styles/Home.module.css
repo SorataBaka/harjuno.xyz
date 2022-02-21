@@ -25,7 +25,7 @@
   margin-bottom: 0px;
 }
 .profilePicture {
-  border-radius: 100px;
+  border-radius: 100%;
 }
 .indexBody {
   height: 100vh;

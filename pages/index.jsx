@@ -70,7 +70,7 @@ class List extends react.Component {
       <div className={styles.items}>
           {this.items.map((item) => (
             <a href={item.website} key={item.id}>
-              <img src={item.svgSource} alt={item.toolName} className={styles.toolImage}/>
+              <img src={item.svgSource} alt={item.toolName} className={styles.itemImage}/>
             </a>
           ))}
       </div>

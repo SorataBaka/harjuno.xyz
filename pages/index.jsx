@@ -45,11 +45,11 @@ export default function Home(props) {
           </div>
           <div className={styles.indexBody}>
             <h2 className={styles.pageSectionTitle}>Tools I use</h2>
-            <ToolsList tools={props.tools}/>
+            <List items={props.tools}/>
           </div>
           <div className={styles.indexBody}>
             <h2 className={styles.pageSectionTitle}>Contact Me</h2>
-            <SocialsList socials={props.socials}/>
+            <List items={props.socials}/>
           </div>
         <div className={styles.footer}>
           <h5>Copyright © 2022 All Right Reserved. Christian Harjuno</h5>
@@ -61,41 +61,24 @@ export default function Home(props) {
     </div>
   )
 }
-class ToolsList extends react.Component {
+class List extends react.Component {
   constructor(props){
     super(props)
-    this.tools = props.tools
+    this.items = props.items
   }
   render(){
     return(
-      <div className={styles.toolList}>
-          {this.tools.map((tool) => (
-            <a href={tool.website} key={tool.id}>
-              <img src={tool.svgSource} alt={tool.toolName} className={styles.toolImage}/>
+      <div className={styles.items}>
+          {this.items.map((item) => (
+            <a href={item.website} key={item.id}>
+              <img src={item.svgSource} alt={item.toolName} className={styles.toolImage}/>
             </a>
           ))}
       </div>
     )
   }
 }
-class SocialsList extends react.Component {
-  constructor(props){
-    super(props)
-    this.socials = props.socials
-  }
-  render(){
-    return (
-      <div className={styles.toolList}>
-        {this.socials.map((social) => (
-          <a href={social.website} key={social.id}>
-            <img src={social.svgSource} alt={social.socialName} className={styles.toolImage}/>
-          </a>
-        ))}
-      </div>
-    )
-  }
-}
-export async function getServerSideProps(){
+export async function getStaticProps(){
   const toolsRequest = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/tools`);
   const tools = await toolsRequest.json()
   const socialsRequest = await fetch(`${process.env.NEXT_PUBLIC_VERCEL_URL}/api/social`);

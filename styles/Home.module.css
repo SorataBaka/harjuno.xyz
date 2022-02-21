@@ -12,7 +12,6 @@
   background-repeat: no-repeat;
   overflow: hidden;
   /* darken background */
-  background-color: rgb(0, 0, 0);
 }
 .mainContent {
   overflow-y: scroll;
@@ -24,15 +23,6 @@
   font-size: 1.4rem;
   color: white;
   margin-bottom: 0px;
-}
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
 }
 .profilePicture {
   border-radius: 100px;
@@ -66,7 +56,7 @@
   margin-bottom: 0px;
   color: white
 }
-.toolList{
+.items{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -101,5 +91,8 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+  .aboutMe{
+    font-size: 18px;
   }
 }

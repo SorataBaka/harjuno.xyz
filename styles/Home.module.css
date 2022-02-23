@@ -6,17 +6,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("/api/assets/background.jpg");
+  /* background-image: url("/api/assets/background.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   overflow: hidden;
   /* darken background */
+}
+.background {
+  position: absolute;
+  z-index: 0;
 }
 .mainContent {
   overflow-y: scroll;
   overflow-x: hidden;
   width: 100vw;
+  z-index: 1;
 }
 
 .title {
@@ -61,9 +66,9 @@
   color: white
 }
 .pageSectionTitle {
-  font-size: 4rem;
+  font-size: 3.8vw;
   font-weight: bold;
-  margin-bottom: 0px;
+  margin: 0;
   color: white
 }
 .items{
@@ -78,12 +83,14 @@
   margin: 20px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.5);
+  height: auto;
 
 }
 .itemImage {
-  width: auto;
+  width: 100px;
   height: 100px;
   margin: 10px;
+  display: inline;
 }
 .footer{
   width: 100vw;
@@ -101,12 +108,28 @@
   color: white;
   
 }
-@media (max-width: 600px) {
+@media (max-width: 680px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
   .aboutMe{
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .aboutMeContainer {
+    margin: 0;
+  }
+  .name {
+    font-size: 2rem;
+  }
+  .title {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  .pageSectionTitle {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    color: white
   }
 }

@@ -3,9 +3,9 @@ import styles from '../styles/Home.module.css'
 import dotenv from "dotenv"
 import List from "../components/List"
 import Fade from "react-reveal/Fade"
-import Zoom from "react-reveal/Zoom"
 import config from "react-reveal/globals"
 import React from "react"
+import Image from "next/image"
 config({ssrFadeout: true})
 dotenv.config()
 export default function Home(props) {
@@ -45,15 +45,29 @@ export default function Home(props) {
       </Head>
 
       <main className={styles.main}>
+        <Image 
+          src="/api/assets/background.jpg"
+          layout='fill'
+          alt='background'
+          className={styles.background}
+          objectFit="cover"
+        />
         <div className={styles.mainContent}>
           <div className={styles.indexBody} id="1">
             <Fade opposite collapse when={isMainTitleRevealed}>
               <h1 className={styles.name}>Christian Harjuno</h1>
             </Fade>
             <Fade cascade collapse when={isMainContentRevealed}>
-              <img src="/api/assets/profile.jpg" alt="Christian Harjuno Profile Picture"  className={styles.profilePicture}/>
+              <Image 
+                src="/api/assets/profile.jpg"
+                alt="Christian Harjuno Profile Picture"
+                className={styles.profilePicture}
+                width={200}
+                height={200}
+              />
+
               <h1 className={styles.name}>Christian Harjuno</h1>
-              <h4 className={styles.title}>Web Developer</h4>
+              <h4 className={styles.title}>Web/Discord Bot Developer</h4>
               <div className={styles.aboutMeContainer}>
                 <p className={styles.aboutMe}>Hi! I’m Chris, an amateur Web/Software Developer who is currently attending college for a Computer Science degree at Bina Nusantara University. Currently active developing Discord Bots for various community servers. I tend to use my skills to automate small insignificant tasks to make things more streamlined and efficient. I am always actively learning new things and experimenting to expand my knowledge in programming.</p> 
               </div>             

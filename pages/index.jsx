@@ -58,14 +58,7 @@ export default function Home(props) {
               <h1 className={styles.name}>Christian Harjuno</h1>
             </Fade>
             <Fade cascade collapse when={isMainContentRevealed}>
-              <Image 
-                src="/api/assets/profile.jpg"
-                alt="Christian Harjuno Profile Picture"
-                className={styles.profilePicture}
-                width={200}
-                height={200}
-              />
-
+              <img src="/api/assets/profile.jpg" alt="Christian Harjuno Profile Picture"  className={styles.profilePicture}/>
               <h1 className={styles.name}>Christian Harjuno</h1>
               <h4 className={styles.title}>Web/Discord Bot Developer</h4>
               <div className={styles.aboutMeContainer}>

@@ -11,15 +11,7 @@ export default class List extends react.Component {
       <div className={styles.items}>
           {this.items.map((item) => (
             <a href={item.website} key={item.id}>
-              <div className={styles.itemImage}>
-                <Image 
-                  src={item.svgSource}
-                  alt={item.toolName}
-                  width="100%"
-                  height="100%"
-                />
-              </div>
-              {/* <img src={item.svgSource} alt={item.toolName} className={styles.itemImage}/> */}
+              <img src={item.svgSource} alt={item.toolName} className={styles.itemImage}/>
             </a>
           ))}
       </div>

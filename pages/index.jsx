@@ -13,10 +13,10 @@ export default function Home(props) {
   const [isMainContentRevealed, setMainContent] = React.useState(false)
   setTimeout(() => {
     setMainTitle(false)
-  }, 1000)
+  }, 500)
   setTimeout(() => {
     setMainContent(true)
-  }, 1500)
+  }, 900)
   return (
     <div className={styles.container}>
       <Head>

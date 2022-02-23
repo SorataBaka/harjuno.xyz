@@ -38,11 +38,21 @@
   background-color: rgba(0, 0, 0, 0.8);
 
 }
+.aboutMeContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+}
 .aboutMe {
   width: 80%;
   text-align: center;
   font-size: 1.5rem;
   color: white;
+  margin: 0;
 }
 .name {
   font-size: 3rem;

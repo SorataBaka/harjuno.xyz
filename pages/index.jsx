@@ -5,9 +5,18 @@ import List from "../components/List"
 import Fade from "react-reveal/Fade"
 import Zoom from "react-reveal/Zoom"
 import config from "react-reveal/globals"
+import React from "react"
 config({ssrFadeout: true})
 dotenv.config()
 export default function Home(props) {
+  const [isMainTitleRevealed, setMainTitle] = React.useState(true)
+  const [isMainContentRevealed, setMainContent] = React.useState(false)
+  setTimeout(() => {
+    setMainTitle(false)
+  }, 1000)
+  setTimeout(() => {
+    setMainContent(true)
+  }, 1500)
   return (
     <div className={styles.container}>
       <Head>
@@ -38,14 +47,16 @@ export default function Home(props) {
       <main className={styles.main}>
         <div className={styles.mainContent}>
           <div className={styles.indexBody} id="1">
-            <Fade opposite collapse when={true}>
-
+            <Fade opposite collapse when={isMainTitleRevealed}>
+              <h1 className={styles.name}>Christian Harjuno</h1>
             </Fade>
-            <Fade cascade>
+            <Fade cascade collapse when={isMainContentRevealed}>
               <img src="/api/assets/profile.jpg" alt="Christian Harjuno Profile Picture"  className={styles.profilePicture}/>
               <h1 className={styles.name}>Christian Harjuno</h1>
               <h4 className={styles.title}>Web Developer</h4>
-              <p className={styles.aboutMe}>Hi! I’m Chris, an amateur Web/Software Developer who is currently attending college for a Computer Science degree at Bina Nusantara University. Currently active developing Discord Bots for various community servers. I tend to use my skills to automate small insignificant tasks to make things more streamlined and efficient. I am always actively learning new things and experimenting to expand my knowledge in programming.</p>              
+              <div className={styles.aboutMeContainer}>
+                <p className={styles.aboutMe}>Hi! I’m Chris, an amateur Web/Software Developer who is currently attending college for a Computer Science degree at Bina Nusantara University. Currently active developing Discord Bots for various community servers. I tend to use my skills to automate small insignificant tasks to make things more streamlined and efficient. I am always actively learning new things and experimenting to expand my knowledge in programming.</p> 
+              </div>             
             </Fade>
             </div>
           <div className={styles.indexBody} id="2">
@@ -61,7 +72,7 @@ export default function Home(props) {
             </Fade>
           </div>
           <div className={styles.footer}>
-            <h5>Copyright © 2022 All Right Reserved. Christian Harjuno</h5>
+            <h5>Copyright © 2022 All Right Reserved. Christian Harjuno. Powered by Next.Js and Vercel</h5>
           </div>
         </div>
 

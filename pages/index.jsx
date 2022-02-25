@@ -1,18 +1,25 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Image from "next/image"
+import React, { useReducer, useRef } from "react"
 import dotenv from "dotenv"
-import List from "../components/List"
+
 import Fade from "react-reveal/Fade"
 import config from "react-reveal/globals"
-import React from "react"
-import Image from "next/image"
+
+import styles from '../styles/Home.module.css'
+import List from "../components/List"
+
 config({ssrFadeout: true})
 dotenv.config()
+
 export default function Home(props) {
   const [isMainContentRevealed, setMainContent] = React.useState(false)
   setTimeout(() => {
     setMainContent(true)
   }, 900)
+  let landingScreen = useRef(null)
+  let toolsScreen = useRef(null)
+  let contactScreen = useRef(null)
   return (
     <div className={styles.container}>
       <Head>
@@ -49,32 +56,38 @@ export default function Home(props) {
           objectFit="cover"
         />
         <div className={styles.mainContent}>
-          <div className={styles.indexBody} id="1">
-            <Fade cascade collapse when={isMainContentRevealed}>
+          <div className={styles.indexBody} ref={(element) => {
+            landingScreen = element
+          }}>
+            <Fade style="height: auto;" collapse when={isMainContentRevealed}>
               <img src="/api/assets/profile.jpg" alt="Christian Harjuno Profile Picture"  className={styles.profilePicture}/>
             </Fade>
               <h1 className={styles.name}>Christian Harjuno</h1>
-            <Fade cascade collapse when={isMainContentRevealed}>
+            <Fade collapse when={isMainContentRevealed}>
               <h4 className={styles.title}>Web/Discord Bot Developer</h4>
               <div className={styles.aboutMeContainer}>
                 <p className={styles.aboutMe}>Hi! I’m Chris, an amateur Web/Software Developer who is currently attending college for a Computer Science degree at Bina Nusantara University. Currently active developing Discord Bots for various community servers. I tend to use my skills to automate small insignificant tasks to make things more streamlined and efficient. I am always actively learning new things and experimenting to expand my knowledge in programming.</p> 
               </div>
             </Fade>
             </div>
-          <div className={styles.indexBody} id="2">
+          <div className={styles.indexBody} ref={(element) => {
+            toolsScreen = element
+          }}>
             <Fade bottom>
               <h2 className={styles.pageSectionTitle}>Tools I use</h2>
               <List items={props.tools}/>
             </Fade>
           </div>
-          <div className={styles.indexBody} id="3">
+          <div className={styles.indexBody} ref={(element) => {
+            contactScreen = element
+          }}>
             <Fade bottom>
               <h2 className={styles.pageSectionTitle}>Contact Me</h2>
               <List items={props.socials}/>
             </Fade>
           </div>
           <div className={styles.footer}>
-            <h5>Copyright © 2022 All Right Reserved. Christian Harjuno. Powered by Next.Js and Vercel</h5>
+            <h5 className={styles.copyright}>Copyright © 2022 All Right Reserved. Christian Harjuno. Powered by Next.Js and Vercel</h5>
           </div>
         </div>
 

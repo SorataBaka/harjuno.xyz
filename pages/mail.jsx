@@ -1,6 +1,8 @@
 import react from "react"
 import mainstyles from "../styles/Home.module.css"
 import Head from "next/head"
+import Image from "next/image"
+import MessageForm from "../components/MessageForm"
 export default class Mail extends react.Component{
   constructor(){
     super()
@@ -35,16 +37,24 @@ export default class Mail extends react.Component{
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossOrigin="anonymous"></link>          
         </Head>
         <main className={mainstyles.main}>
+        <Image 
+          src="/api/assets/background.jpg"
+          layout='fill'
+          alt='background'
+          className={mainstyles.background}
+          objectFit="cover"
+        />
           <div className={mainstyles.mainContent}>
             <div className={mainstyles.indexBody}>
-              <h1 className={mainstyles.name}>
-                Hello
-              </h1>
+              
+              <MessageForm />
             </div>
-
           </div>
         </main>
       </div>
     )
   }
 }
+//Props
+//States
+//Hooks

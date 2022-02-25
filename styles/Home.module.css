@@ -48,13 +48,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   width: 100%;
   margin-top: 30px;
 }
 .aboutMe {
   width: 80%;
-  text-align: center;
+  text-align: justify;
+  text-align-last: center;
   font-size: 1.5rem;
   color: white;
   margin: 0;
@@ -83,8 +83,7 @@
   margin: 20px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.5);
-  height: auto;
-
+  height: fit-content;
 }
 .itemImage {
   width: 100px;
@@ -108,28 +107,58 @@
   color: white;
   
 }
-@media (max-width: 680px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+.copyright {
+  text-align: center;
+  color: white;
+  font-size: 0.7rem;
+}
+@media (max-width: 620px) {
+  .profilePicture{
+    width: 200px;
+    height: 200px;
+  }
+  /* CSS for text items */
+  .aboutMeContainer{
+    margin-top: 10px;
   }
   .aboutMe{
-    font-size: 16px;
-  }
-  .aboutMeContainer {
-    margin: 0;
+    font-size: 0.99rem;
+    text-align: center;
   }
   .name {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    margin-top: 10px;
   }
   .title {
-    font-size: 1.2rem;
-    margin: 0;
+    font-size: 1.0rem;
+    margin-top: 10px;
+    height: fit-content;
   }
   .pageSectionTitle {
     font-size: 3em;
     font-weight: bold;
-    margin: 0;
     color: white
+  }
+
+  /* CSS for item lists */
+  .items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: fit-content;
+  }
+  .itemImage {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    display: block;
   }
 }

@@ -1,6 +1,6 @@
 import fs from "fs"
 import path from "path"
-export default function Assets(req, res) {
+export default function Assets (req, res) {
   const {fileName} = req.query
   const filePath = `./public/${fileName}`
   if(!fs.existsSync(path.resolve(filePath))) return res.status(404).json({Status: 404, Message: "File not found"})
@@ -15,4 +15,5 @@ export default function Assets(req, res) {
   //Set the header
   res.setHeader("Content-Type", fileTypeHeader)
   return res.status(200).send(file)
+   
 }

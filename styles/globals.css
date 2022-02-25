@@ -28,9 +28,20 @@ a {
   background: #001d36;
   border-radius: 10px;
 }
-@media (max-width: 680px) {
+@media (max-width: 700px) {
   ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
   }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+  box-shadow: black;
+  -webkit-box-shadow: 0 0 0 30px rgb(0, 0, 0) inset !important;
+}
+input:-webkit-autofill{
+  -webkit-text-fill-color: white !important;
 }
